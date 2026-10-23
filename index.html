@@ -385,11 +385,11 @@
             animation-play-state: paused;
         }
 
+        /* التعديل: شلنا pointer-events: none عشان الفيديو يشتغل */
         .preview-card iframe {
             width: 100%;
             height: 100%;
             border: 0;
-            pointer-events: none;
         }
 
         /* INTRO VIDEO SECTION */
@@ -1123,6 +1123,7 @@
                 justify-content: center;
             }
 
+            /* التعديل: الموبايل هيظهر 4 كروت في صفين */
             .hero-preview {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
@@ -1212,14 +1213,15 @@
                 font-size: 26px;
             }
 
+            /* التعديل: شلنا إخفاء الكروت */
             .hero-preview {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
             }
 
-            .preview-card:nth-child(3),
+            /* .preview-card:nth-child(3),
             .preview-card:nth-child(4) {
                 display: none;
-            }
+            } */
         }
     </style>
 </head>
@@ -1277,16 +1279,16 @@
             <!-- 4 Preview Videos -->
             <div class="hero-preview">
                 <div class="preview-card">
-                    <iframe src="https://www.youtube.com/embed/n1TD3oQ3w6A" loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/n1TD3oQ3w6A" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="preview-card">
-                    <iframe src="https://www.youtube.com/embed/nrMSSTsaBNg" loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/nrMSSTsaBNg" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="preview-card">
-                    <iframe src="https://www.youtube.com/embed/iU4IHA8dwns" loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/iU4IHA8dwns" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
                 <div class="preview-card">
-                    <iframe src="https://www.youtube.com/embed/ltSn2qwkBBc" loading="lazy"></iframe>
+                    <iframe src="https://www.youtube.com/embed/ltSn2qwkBBc" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -1564,7 +1566,12 @@
                     { url: "https://www.youtube.com/embed/J9RotggLKuo", title: "Stand", desc: "Tech accessory showcase" },
                     { url: "https://www.youtube.com/embed/nseLT2EUFtI", title: "Retro CD", desc: "Retro tech showcase" },
                     { url: "https://www.youtube.com/embed/AkxTgCitdfE", title: "Charger Robot", desc: "Tech gadget review" },
-                    { url: "https://www.youtube.com/embed/ztYutR5ROVs", title: "Transparent Speaker", desc: "Audio tech showcase" }
+                    { url: "https://www.youtube.com/embed/ztYutR5ROVs", title: "Transparent Speaker", desc: "Audio tech showcase" },
+                    // الـ 4 فيديوهات المقدمة مضافة في نهاية القائمة
+                    { url: "https://www.youtube.com/embed/n1TD3oQ3w6A", title: "Featured Tech Showcase", desc: "Featured tech content" },
+                    { url: "https://www.youtube.com/embed/nrMSSTsaBNg", title: "Featured Tech Review", desc: "Featured product review" },
+                    { url: "https://www.youtube.com/embed/iU4IHA8dwns", title: "Featured Tech Feature", desc: "Featured product feature" },
+                    { url: "https://www.youtube.com/embed/ltSn2qwkBBc", title: "Featured Tech Highlight", desc: "Featured product highlight" }
                 ]
             },
             Medical: {
